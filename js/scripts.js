@@ -57,56 +57,92 @@ $(document).ready(function() {
   })
 
   $(".row1 .column1").click(function() {
-    $(".row1 .column1").append("<p>" + currentPlayer.mark + "</p>");
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if(!$('.row1 .column1 p').length) {
+      $(".row1 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row1 .column2").click(function() {
-    $(".row1 .column2").append("<p>" + currentPlayer.mark + "</p>");
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if(!$('.row1 .column2 p').length) {
+      $(".row1 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row1 .column3").click(function() {
-    $(".row1 .column3").append("<p>" + currentPlayer.mark + "</p>");
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if(!$('.row1 .column3 p').length) {
+      $(".row1 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row2 .column1").click(function() {
-    $(".row2 .column1").append("<p>" + currentPlayer.mark + "</p>");
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if(!$('.row2 .column1 p').length) {
+      $(".row2 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row2 .column2").click(function() {
-    $(".row2 .column2").append("<p>" + currentPlayer.mark + "</p>");
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if(!$('.row2 .column2 p').length) {
+      $(".row2 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row2 .column3").click(function() {
-    $(".row2 .column3").append("<p>" + currentPlayer.mark + "</p>");
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if(!$('.row2 .column3 p').length) {
+      $(".row2 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row3 .column1").click(function() {
-    $(".row3 .column1").append("<p>" + currentPlayer.mark + "</p>");
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if(!$('.row3 .column1 p').length) {
+      $(".row3 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row3 .column2").click(function() {
-    $(".row3 .column2").append("<p>" + currentPlayer.mark + "</p>");
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if(!$('.row3 .column2 p').length) {
+      $(".row3 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 
   $(".row3 .column3").click(function() {
-    $(".row3 .column3").append("<p>" + currentPlayer.mark + "</p>");
-    playerSwitch();
-    $("#currentPlayer").text(currentPlayer.name);
+    if(!$('.row3 .column3 p').length) {
+      $(".row3 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      playerSwitch();
+      $("#currentPlayer").text(currentPlayer.name);
+    } else {
+      alert("Please choose an empty square");
+    }
   })
 })
