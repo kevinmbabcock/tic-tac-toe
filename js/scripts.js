@@ -35,6 +35,13 @@ var playerSwitch = function() {
   }
 }
 
+var isWinner = function() {
+  // if($('.row1 .column1 p "O"').length) {
+  //   $(".board").hide();
+  //   $(".winner").show();
+  // }
+}
+
 $(document).ready(function() {
   $("#playerNames").submit(function(event) {
     event.preventDefault();
@@ -58,91 +65,109 @@ $(document).ready(function() {
 
   $(".row1 .column1").click(function() {
     if(!$('.row1 .column1 p').length) {
+      $(".fail").hide();
       $(".row1 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
     } else {
-      alert("Please choose an empty square");
+      $(".fail").show();
     }
   })
 
   $(".row1 .column2").click(function() {
     if(!$('.row1 .column2 p').length) {
+      $(".fail").hide();
       $(".row1 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
     } else {
-      alert("Please choose an empty square");
+      $(".fail").show();
     }
   })
 
   $(".row1 .column3").click(function() {
     if(!$('.row1 .column3 p').length) {
+      $(".fail").hide();
       $(".row1 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
     } else {
-      alert("Please choose an empty square");
+      $(".fail").show();
     }
   })
 
   $(".row2 .column1").click(function() {
     if(!$('.row2 .column1 p').length) {
+      $(".fail").hide();
       $(".row2 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
     } else {
-      alert("Please choose an empty square");
+      $(".fail").show();
     }
   })
 
   $(".row2 .column2").click(function() {
     if(!$('.row2 .column2 p').length) {
+      $(".fail").hide();
       $(".row2 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
     } else {
-      alert("Please choose an empty square");
+      $(".fail").show();
     }
   })
 
   $(".row2 .column3").click(function() {
     if(!$('.row2 .column3 p').length) {
+      $(".fail").hide();
       $(".row2 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
     } else {
-      alert("Please choose an empty square");
+      $(".fail").show();
     }
   })
 
   $(".row3 .column1").click(function() {
     if(!$('.row3 .column1 p').length) {
+      $(".fail").hide();
       $(".row3 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
     } else {
-      alert("Please choose an empty square");
+      $(".fail").show();
     }
   })
 
   $(".row3 .column2").click(function() {
     if(!$('.row3 .column2 p').length) {
+      $(".fail").hide();
       $(".row3 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
     } else {
-      alert("Please choose an empty square");
+      $(".fail").show();
     }
   })
 
   $(".row3 .column3").click(function() {
     if(!$('.row3 .column3 p').length) {
+      $(".fail").hide();
       $(".row3 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
     } else {
-      alert("Please choose an empty square");
+      $(".fail").show();
     }
   })
 })

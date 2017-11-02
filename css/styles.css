@@ -1,5 +1,9 @@
-.winner, .board, body h3 {
+.winner, .board, body h3, .fail {
   display: none;
+}
+
+.fail {
+  color: red;
 }
 
 .col-md-4 {
