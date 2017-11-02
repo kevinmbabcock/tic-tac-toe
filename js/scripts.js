@@ -6,7 +6,7 @@ var r1c1; var r1c2; var r1c3; var r2c1; var r2c2; var r2c3; var r3c1; var r3c2; 
 function Player (name, mark) {
   this.name = name;
   this.mark = mark;
-  this
+  this.spaces = [];
 }
 
 function Board (row, column) {
@@ -36,10 +36,17 @@ var playerSwitch = function() {
 }
 
 var isWinner = function() {
-  // if($('.row1 .column1 p "O"').length) {
-  //   $(".board").hide();
-  //   $(".winner").show();
-  // }
+  var winningCombos = ["1,2,3", "4,5,6", "7,8,9", "1,4,7", "2,5,8", "3,5,8", "1,5,9", "3,5,7"];
+  var fixOrder = currentPlayer.spaces.sort();
+  var check = fixOrder.toString();
+  console.log(check);
+  for (index = 0; index < winningCombos.length; index++) {
+    if (check.includes(winningCombos[index])) {
+      $("#winner").text(currentPlayer.name);
+      $(".winner").show();
+      //console.log(winningCombos[index]);
+    }
+  }
 }
 
 $(document).ready(function() {
@@ -67,6 +74,7 @@ $(document).ready(function() {
     if(!$('.row1 .column1 p').length) {
       $(".fail").hide();
       $(".row1 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.spaces.push(1);
       isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
@@ -79,6 +87,7 @@ $(document).ready(function() {
     if(!$('.row1 .column2 p').length) {
       $(".fail").hide();
       $(".row1 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.spaces.push(2);
       isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
@@ -91,6 +100,7 @@ $(document).ready(function() {
     if(!$('.row1 .column3 p').length) {
       $(".fail").hide();
       $(".row1 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.spaces.push(3);
       isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
@@ -103,6 +113,7 @@ $(document).ready(function() {
     if(!$('.row2 .column1 p').length) {
       $(".fail").hide();
       $(".row2 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.spaces.push(4);
       isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
@@ -115,6 +126,7 @@ $(document).ready(function() {
     if(!$('.row2 .column2 p').length) {
       $(".fail").hide();
       $(".row2 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.spaces.push(5);
       isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
@@ -127,6 +139,7 @@ $(document).ready(function() {
     if(!$('.row2 .column3 p').length) {
       $(".fail").hide();
       $(".row2 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.spaces.push(6);
       isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
@@ -139,6 +152,7 @@ $(document).ready(function() {
     if(!$('.row3 .column1 p').length) {
       $(".fail").hide();
       $(".row3 .column1").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.spaces.push(7);
       isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
@@ -151,6 +165,7 @@ $(document).ready(function() {
     if(!$('.row3 .column2 p').length) {
       $(".fail").hide();
       $(".row3 .column2").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.spaces.push(8);
       isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
@@ -163,6 +178,7 @@ $(document).ready(function() {
     if(!$('.row3 .column3 p').length) {
       $(".fail").hide();
       $(".row3 .column3").append("<p>" + currentPlayer.mark + "</p>");
+      currentPlayer.spaces.push(9);
       isWinner();
       playerSwitch();
       $("#currentPlayer").text(currentPlayer.name);
